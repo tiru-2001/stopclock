@@ -1,0 +1,61 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container .clears, .container .stop, .container .start {
+  border-radius: 5px;
+  box-shadow: 5px 4px 7px gray;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 10px 2px;
+  width: 100px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(37, 34, 34);
+  transition: all ease 200ms;
+}
+
+.container .clears:active, .container .stop:active, .container .start:active {
+  transform: scale(0.9);
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+.container .heading {
+  font-size: 2rem;
+}
+.container .display {
+  border: 2px solid salmon;
+  height: 40px;
+  width: 95%;
+  margin: 20px 0px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 0;
+  border-radius: 5px;
+}
+.container .start {
+  background-color: #0ce940;
+}
+.container .stop {
+  background-color: #f51717;
+}
+.container .clears {
+  background-color: #d6f40c;
+}/*# sourceMappingURL=style.css.map */
