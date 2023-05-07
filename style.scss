@@ -1,0 +1,80 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+$fontFamily: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+$Start_button_bg: #0ce940;
+$Stop_button_bg: #f51717;
+$Clear_button_bg: #d6f40c;
+
+//boxshadow mixin
+@mixin boxShadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+@mixin borderRadius($value) {
+  border-radius: $value;
+}
+
+// button class placeholder
+%button {
+  @include borderRadius(5px);
+  @include boxShadow(5px, 4px, 7px, gray);
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 10px 2px;
+  width: 100px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(37, 34, 34);
+  transition: all ease 200ms;
+}
+%button:active {
+  transform: scale(0.9);
+}
+// body styling
+
+body {
+  font-family: $fontFamily;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+// container styling
+.container {
+  @include boxShadow(5px, 5px, 5px, gray);
+  @include borderRadius(5px);
+
+  display: grid;
+  place-items: center;
+  padding: 40px;
+
+  .heading {
+    font-size: 2rem;
+  }
+  .display {
+    border: 2px solid salmon;
+    height: 40px;
+    width: 95%;
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 0;
+    @include borderRadius(5px);
+  }
+  .start {
+    @extend %button;
+    background-color: $Start_button_bg;
+  }
+  .stop {
+    @extend %button;
+    background-color: $Stop_button_bg;
+  }
+  .clears {
+    @extend %button;
+    background-color: $Clear_button_bg;
+  }
+}
