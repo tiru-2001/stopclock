@@ -20,7 +20,6 @@ stops.addEventListener("click", () => {
 });
 
 clears.addEventListener("click", () => {
-  alert("hi");
   count = 0;
 
   display.innerHTML = count;
